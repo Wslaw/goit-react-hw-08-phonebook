@@ -1,8 +1,8 @@
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
-import winter from '../winter.jpg';
-import summer from '../summer.jpg';
+import winter from '../../images/winter.jpg';
+import summer from '../../images/summer.jpg';
 
 import styles from './phonebook.module.css';
 

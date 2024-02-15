@@ -5,6 +5,7 @@ import styles from './contactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFilteredContacts } from '../../../redux/contacts/contacts-selectors';
 import { fetchContacts } from '../../../redux/contacts/contacts-operations';
+import Loader from '../../Loader/Loader';
 
 
 const ContactList = () => {
@@ -39,7 +40,7 @@ const ContactList = () => {
   return (
     <div>
       {error && <p>{error}</p>}
-      {isLoading && <p>...Loading</p>}
+      {isLoading && <Loader/>}
       {Boolean(items.length) && (
         <ol className={styles.customList}>{elements}</ol>
       )}
