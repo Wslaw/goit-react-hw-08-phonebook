@@ -1,0 +1,14 @@
+.block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    box-shadow: -1px 1px 1px 1px;
+    background-color: rgb(200, 196, 196);
+}

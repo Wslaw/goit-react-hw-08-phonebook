@@ -1,6 +1,6 @@
 import {  NavLink } from 'react-router-dom';
 
-import styles from './main-menu.module.css';
+import styles from './navbar-main-menu.module.css';
 
 
 const MainMenu = () => {
@@ -14,6 +14,11 @@ const MainMenu = () => {
         </li>
         <div className={styles.nav}>
           <li>
+            <NavLink className={styles.link} to="/contacts ">
+              Contacts
+            </NavLink>
+          </li>
+          {/* <li>
             <NavLink className={styles.link} to="/login ">
               Sign in
             </NavLink>
@@ -22,12 +27,7 @@ const MainMenu = () => {
             <NavLink className={styles.link} to="/register ">
               Sign up
             </NavLink>
-          </li>
-          <li>
-            <NavLink className={styles.link} to="/contacts ">
-              Contacts
-            </NavLink>
-          </li>
+          </li> */}
         </div>
       </ul>
     );

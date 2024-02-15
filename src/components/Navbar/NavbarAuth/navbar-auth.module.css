@@ -1,0 +1,24 @@
+.block{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 18px;
+      border: 1px solid #776e76;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.link:global(.active){
+    color: rgb(102, 132, 185);
+  
+}
+
+.link:hover{
+    box-shadow:2px 2px 8px 1px #776e76;
+}
