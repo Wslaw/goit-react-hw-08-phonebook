@@ -1,32 +1,61 @@
 import React from 'react';
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Phonebook from './Phonebook/Phonebook';
-import SharedLayout from './SharedLayout/SaredLayout';
-import LoginPage from '../pages/LoginPage/LoginPage';
-import HomePage from '../pages/HomePage/HomePage';
-import SignUpPage from '../pages/SignUpPage/SignUpPage';
-import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
-// import Snowfall from "./Snowfall/Snowfall";
+import { lazy } from 'react';
+import Loader from './Loader/Loader';
 
-// const isWinterMonth = () => {
-//   const currentDate = new Date();
-//   const month = currentDate.getMonth() + 1;
-//   return month === 12 || month === 1 || month === 2;
-// }
+import SharedLayout from './SharedLayout/SaredLayout';
+import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
+
+const Phonebook = lazy(() => import('./Phonebook/Phonebook')); 
+const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage')); 
+const HomePage = lazy(() => import('../pages/HomePage/HomePage')); 
+const SignUpPage = lazy(() => import('../pages/SignUpPage/SignUpPage')); 
+
 const AppRoutes = () => {
-  //    const isWinter = isWinterMonth();
+  
 
   return (
+  
+
     <div>
       <Routes>
-              <Route path="/" element={<SharedLayout />}>
-                  <Route index element={<HomePage/>} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<SignUpPage />} />
-          <Route path="contacts" element={<Phonebook />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                <HomePage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <Suspense fallback={<Loader />}>
+                <LoginPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <Suspense fallback={<Loader />}>
+                <SignUpPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="contacts"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Phonebook />
+              </Suspense>
+            }
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
-        {/* {isWinter && <Snowfall />} */}
+     
       </Routes>
     </div>
   );

@@ -1,8 +1,18 @@
 .title{
-    display: flex;justify-content: center;
-    padding: 40px 40px;
+    display: flex;
+    justify-content: start;
+    padding: 5px 20px;
     font-family: serif;
     font-size: 30px;
     font-weight: 700;
     color: #212991;
+}
+.text{
+    display: flex;
+    justify-content: start;
+    padding: 5px 20px;
+    font-family: serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
 }

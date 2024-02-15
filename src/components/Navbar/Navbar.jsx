@@ -11,11 +11,11 @@ const Navbar = () => {
     
     return (
         <>
-            <navbar className={styles.navbar}>
+            <div className={styles.navbar}>
                 <Link to = "/">Logo</Link>
                 <NavbarMenu />
                 {isLogin ? <NavbarUser /> : <NavbarAuth />}
-            </navbar>
+            </div>
         </>
     )
 }

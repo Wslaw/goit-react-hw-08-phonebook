@@ -10,7 +10,7 @@ const NavbarAuth = () => {
       </NavLink>
       
       <NavLink className={styles.link} to="/register">
-        Register
+        Sign Up
       </NavLink>
     </div>
   );

@@ -1,0 +1,24 @@
+.block{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 40px;
+}
+
+.block label{
+    width: 40px;
+}
+
+.btn {
+    padding: 5px 10px;
+    color: #000;
+    background-color: bisque;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: cadetblue;
+    color: #fff;
+}

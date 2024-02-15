@@ -1,7 +1,7 @@
 .menu{
      list-style: none;
      display: flex;
-     justify-content: end;
+     /* justify-content: flex-end; */
 
 }
 
@@ -20,4 +20,7 @@
 .link:global(.active){
     color: rgb(102, 132, 185);
     text-decoration: underline;
+}
+.link:hover{
+    color:#8e92cd ;
 }
