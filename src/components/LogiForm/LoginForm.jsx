@@ -1,22 +1,19 @@
-import { useState,  useId } from 'react';
+import { useState, useId } from 'react';
 // import { nanoid } from '@reduxjs/toolkit';
 
-import styles from './sign-up-form.module.css';
+import styles from './login-form.module.css';
 
 const INITIAL_STATE = {
-  name: '',
+  
   email: '',
   password: '',
 };
 
-const SignUpForm = ({ onSubmit }) => {
+const LoginForm = ({ onSubmit }) => {
   const [state, setState] = useState({ ...INITIAL_STATE });
   const handleChange = ({ target }) => {
-
     const { name, value, type, checked } = target;
     const newValue = type === 'checkbox' ? checked : value;
-    // const { name, value } = target;
-    // const newValue =  value;
 
     setState({
       ...state,
@@ -34,21 +31,18 @@ const SignUpForm = ({ onSubmit }) => {
     setState({ ...INITIAL_STATE });
   };
 
-  const nameId = useId();
   const emailId = useId();
   const passwordId = useId();
-  const { name, email, password } = state;
+  const {  email, password } = state;
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className={styles.block}>
-          <label htmlFor={nameId}>Name:</label>
-          <input id={nameId} value={name} onChange={handleChange} name="name" required />
-        </div>
+        
         <div className={styles.block}>
           <label htmlFor={emailId}>Email:</label>
-          <input id={emailId}
+          <input
+            id={emailId}
             value={email}
             onChange={handleChange}
             type="email"
@@ -58,7 +52,8 @@ const SignUpForm = ({ onSubmit }) => {
         </div>
         <div className={styles.block}>
           <label htmlFor={passwordId}>Password:</label>
-          <input id={passwordId}
+          <input
+            id={passwordId}
             value={password}
             onChange={handleChange}
             type="password"
@@ -67,11 +62,11 @@ const SignUpForm = ({ onSubmit }) => {
           />
         </div>
         <button className={styles.btn} type="submit">
-          Sign Up
+         Login
         </button>
       </form>
     </>
   );
 };
 
-export default SignUpForm;
+export default LoginForm;

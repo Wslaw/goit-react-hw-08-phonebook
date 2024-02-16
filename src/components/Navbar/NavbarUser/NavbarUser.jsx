@@ -1,11 +1,26 @@
 import styles from './navbar-user.module.css';
+import { selectUser } from '../../../redux/auth/auth-selectors';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 const NavbarUser = () => {
     
+    const navigate = useNavigate();
+    
+    const handleClick = () => {
+        navigate('/');
+    };
+
+    const {name} = useSelector(selectUser);
     return (
         <div className={styles.block}>
-            Karl-4
-            <button className={styles.btn}>
+            <p>Hello, </p>
+          {name}
+            <button onClick={handleClick} className={styles.btn}>
                 Logout
             </button>
         </div>
