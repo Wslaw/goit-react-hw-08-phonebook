@@ -1,6 +1,6 @@
 .title{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     padding: 5px 20px;
     font-family: serif;
     font-size: 30px;
@@ -9,7 +9,7 @@
 }
 .text{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     padding: 5px 20px;
     font-family: serif;
     font-size: 24px;
