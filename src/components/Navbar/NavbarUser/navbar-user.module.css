@@ -1,19 +1,21 @@
 .block {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 .btn{
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
+    box-shadow: 1px 2px 4px;
         background-color: rgb(200, 196, 196);
 
 }
 
 .btn:hover{
     box-shadow: 1px 1px 4px 1px #272129;
-    background-color: rgb(200, 196, 196);
+    background-color: rgb(190, 187, 187);
 }
 .text{
   margin-left: 30px;

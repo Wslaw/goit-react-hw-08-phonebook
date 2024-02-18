@@ -29,11 +29,13 @@ const Phonebook = () => {
         <div className={styles.wrapper_book}>
           <h1 className={styles.title}>Phonebook</h1>
           <ContactForm />
+          <p className={styles.text}>Find contacts by name</p>
+
+          <Filter />
         </div>
         <div className={styles.wrapper_contacts}>
-          <h2 className={styles.text}>Contacts</h2>
-          <p className={styles.text}>Find contacts by name</p>
-          <Filter />
+          <h2 className={styles.titleText}>Your contacts:</h2>
+
           <ContactList />
         </div>
       </div>

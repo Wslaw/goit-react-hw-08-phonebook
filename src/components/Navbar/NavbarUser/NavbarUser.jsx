@@ -21,7 +21,7 @@ const NavbarUser = () => {
 
     return (
       <div className={styles.block}>
-        <p className={styles.text}>Hello, {user && user.name}</p>
+        <p className={styles.text}>Hello, {user && user.name}.</p>
 
         <button onClick={onLogout} className={styles.btn}>
           Logout

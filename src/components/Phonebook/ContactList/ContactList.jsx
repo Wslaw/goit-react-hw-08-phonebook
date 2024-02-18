@@ -27,13 +27,17 @@ const ContactList = () => {
 
   const elements = items.map(({ id, name, phone }) => (
     <li key={id}>
-      {name}: {phone}
+      {/* {name}: {phone} */}
+      <div className={styles.span}>
+        <span className={styles.name}>{name}:</span>
+        <span className={styles.phone}>{phone}</span>
+      </div>
       <button
         onClick={() => handleDeleteContact(id)}
         className={styles.btnDelete}
         type="button"
       >
-        <img src={basket} alt="Delete" width='12'/>
+        <img src={basket} alt="Delete" width="12" />
       </button>
     </li>
   ));
