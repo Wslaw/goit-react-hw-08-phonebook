@@ -6,8 +6,7 @@ import { useSelector } from 'react-redux';
 import { selectIsLogin } from '../../redux/auth/auth-selectors';
 
 import styles from './navbar.module.css';
-
-
+import logo from '../../images/icon-phonebok.png';
 
 const Navbar = () => {
 const isLogin = useSelector(selectIsLogin);
@@ -16,14 +15,18 @@ const isLogin = useSelector(selectIsLogin);
     // const isLogin = false
     
     return (
-        <>
-            <div className={styles.navbar}>
-                <Link to = "/">Logo</Link>
-                <NavbarMenu />
-                {isLogin ? <NavbarUser /> : <NavbarAuth />}
-            </div>
-        </>
-    )
+      <>
+        <div className={styles.navbar}>
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
+          <div className={styles.menu}>
+            <NavbarMenu />
+            {isLogin ? <NavbarUser /> : <NavbarAuth />}
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default Navbar;

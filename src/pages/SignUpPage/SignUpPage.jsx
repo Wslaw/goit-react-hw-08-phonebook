@@ -3,15 +3,16 @@ import {useSelector, useDispatch } from 'react-redux';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
 import { signup } from '../../redux/auth/auth-operations';
-import { selectAuthError,  selectAuthLoading, selectIsLogin } from '../../redux/auth/auth-selectors';
+import { selectAuthError,  selectAuthLoading} from '../../redux/auth/auth-selectors';
 // import Loader from 'components/Loader/Loader';
-import { Navigate } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom';
 import styles from './signup-page.module.css';
 
 const SignUpPage = () => {
   const authLoading = useSelector(selectAuthLoading);
   const authError = useSelector(selectAuthError);
-  const isLogin = useSelector(selectIsLogin)
+  // const isLogin = useSelector(selectIsLogin)
+
   const dispatch = useDispatch();
   
   const handleSignup = data => {
@@ -19,9 +20,9 @@ const SignUpPage = () => {
 
   }
 
-  if (isLogin) {
-  return <Navigate to="/contacts" />
-}
+//   if (isLogin) {
+//   return <Navigate to="/contacts" />
+// }
 
   return (
     <div>

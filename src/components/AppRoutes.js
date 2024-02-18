@@ -6,6 +6,8 @@ import Loader from './Loader/Loader';
 
 import SharedLayout from './SharedLayout/SaredLayout';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import PublicRoute from './PublicRoute/PublicRoute';
 
 const Phonebook = lazy(() => import('./Phonebook/Phonebook')); 
 const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage')); 
@@ -16,8 +18,6 @@ const AppRoutes = () => {
   
 
   return (
-  
-
     <div>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
@@ -29,33 +29,36 @@ const AppRoutes = () => {
               </Suspense>
             }
           />
-          <Route
-            path="login"
-            element={
-              <Suspense fallback={<Loader />}>
-                <LoginPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="register"
-            element={
-              <Suspense fallback={<Loader />}>
-                <SignUpPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="contacts"
-            element={
-              <Suspense fallback={<Loader />}>
-                <Phonebook />
-              </Suspense>
-            }
-          />
+          <Route element={<PublicRoute/>}>
+            <Route
+              path="login"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <LoginPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="register"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <SignUpPage />
+                </Suspense>
+              }
+            />
+          </Route>
+          <Route element={<PrivateRoute />}>
+            <Route
+              path="contacts"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <Phonebook />
+                </Suspense>
+              }
+            />
+          </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
-     
       </Routes>
     </div>
   );

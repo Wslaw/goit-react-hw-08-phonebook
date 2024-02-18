@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { selectIsLogin } from '../../../redux/auth/auth-selectors';
 import menuItems from './menuItems';
-import styles from './navbar-main-menu.module.css';
+import styles from './navbar-menu.module.css';
 
 
 const MainMenu = () => {

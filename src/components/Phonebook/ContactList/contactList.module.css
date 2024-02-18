@@ -54,13 +54,15 @@ flex-direction: column;
 }
 
 .btnDelete {
+  
   font-family: 'Courier New', Courier, monospace;
   font-size: 12px;
   margin-left: 10px;
-  padding: 2px 2px;
+  padding: 4px 10px 1px;
   border: 1px solid #a2a2a2;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 .btnDelete:hover {
   background-color: rgb(146, 152, 162);
@@ -70,22 +72,17 @@ flex-direction: column;
 .customList {
 List-style-type: none;
   min-height: 340px;
+
+  
 }
 
-.customList li {
-  position: relative;
-  padding-left: 0px; 
-  margin-bottom: 10px; 
-  display: flex; 
-  align-items: center;
+.customList li{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
 }
 
-.customList li:before {
-  content: '\2022'; 
-  font-size: 24px; 
-  margin-right: 10px; 
-  line-height: 1; 
-}
 .listWrapper{
     width: 170px;
  

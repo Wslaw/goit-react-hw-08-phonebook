@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import LoginForm from 'components/LogiForm/LoginForm';
-import { Navigate } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom';
 import {
   selectAuthError,
   selectAuthLoading,
-  selectIsLogin,
+  // selectIsLogin,
 } from '../../redux/auth/auth-selectors';
 
 import { login } from '../../redux/auth/auth-operations';
@@ -15,16 +15,17 @@ const LoginPage = () => {
 
   const authLoading = useSelector(selectAuthLoading);
   const authError = useSelector(selectAuthError);
-  const isLogin = useSelector(selectIsLogin);
+  // const isLogin = useSelector(selectIsLogin);
+
   const dispatch = useDispatch();
 
   const handleLogin = data => {
     dispatch(login(data));
   };
 
-  if (isLogin) {
-    return <Navigate to="/contacts" />;
-  } 
+  // if (isLogin) {
+  //   return <Navigate to="/contacts" />;
+  // } 
 
 
 

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectFilteredContacts } from '../../../redux/contacts/contacts-selectors';
 import { fetchContacts } from '../../../redux/contacts/contacts-operations';
 import Loader from '../../Loader/Loader';
+import basket from '../../../images/basket.png'
 
 
 const ContactList = () => {
@@ -32,7 +33,7 @@ const ContactList = () => {
         className={styles.btnDelete}
         type="button"
       >
-        Delete
+        <img src={basket} alt="Delete" width='12'/>
       </button>
     </li>
   ));

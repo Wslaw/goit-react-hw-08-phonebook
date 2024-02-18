@@ -6,9 +6,15 @@
 .btn{
     padding: 5px 10px;
     border-radius: 5px;
+    cursor: pointer;
+        background-color: rgb(200, 196, 196);
+
 }
 
 .btn:hover{
-    box-shadow: -1px 1px 1px 1px;
+    box-shadow: 1px 1px 4px 1px #272129;
     background-color: rgb(200, 196, 196);
+}
+.text{
+  margin-left: 30px;
 }

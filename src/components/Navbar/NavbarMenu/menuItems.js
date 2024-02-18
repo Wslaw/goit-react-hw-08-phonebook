@@ -5,7 +5,7 @@ const menuItems = [
     {
         id: nanoid(),
         to: '/',
-        text: "HomePage",
+        text: "Home page",
         private: false,
     },
     {
