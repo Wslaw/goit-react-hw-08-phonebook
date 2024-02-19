@@ -11,7 +11,6 @@ import styles from './signup-page.module.css';
 const SignUpPage = () => {
   const authLoading = useSelector(selectAuthLoading);
   const authError = useSelector(selectAuthError);
-  // const isLogin = useSelector(selectIsLogin)
 
   const dispatch = useDispatch();
   
@@ -20,17 +19,15 @@ const SignUpPage = () => {
 
   }
 
-//   if (isLogin) {
-//   return <Navigate to="/contacts" />
-// }
-
   return (
-    <div>
-      <h1 className={styles.title}>Registration page.</h1>
-      <p className={styles.text}>Please sign up.</p>
-      {authLoading && <p>.....Login in progress</p>}
-      <SignUpForm onSubmit={handleSignup} />
-      {authError && <p style={{ color: "red" }}>{authError}</p>}
+    <div className={styles.wrap}>
+      <div className={styles.block}>
+        <h1 className={styles.title}>Registration page.</h1>
+        <p className={styles.text}>Please sign up.</p>
+        {authLoading && <p>.....Login in progress</p>}
+        <SignUpForm onSubmit={handleSignup} />
+        {authError && <p className={styles.error} style={{ color: 'red' }}>{authError}</p>}
+      </div>
     </div>
   );
 };

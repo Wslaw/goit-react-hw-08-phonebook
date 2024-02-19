@@ -1,8 +1,30 @@
+body{
+    background-color: rgb(189, 189, 185);
+}
+.wrap{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d3dfeb;
+    border-radius: 15px;
+    width: 500px;
+}
 .title{
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
     padding: 40px 40px;
     font-family: serif;
     font-size: 30px;
     font-weight: 700;
     color: #212991;
+    
 }

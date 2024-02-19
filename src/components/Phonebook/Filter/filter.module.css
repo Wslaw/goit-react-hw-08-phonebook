@@ -2,16 +2,13 @@
 .input {
   padding: 5px;
   max-width: 260px;
-  /* width: 100%; */
+  width: 100%;
   border: none;
-  /* margin-left: 40px; */
   margin-bottom: 20px;
-  border: 1px solid #a2a2a2;
+  /* border: 1px solid #a2a2a2; */
   border-radius: 5px;
-
-  /* border: 1px solid #ccc;
-  padding: 8px; */
   transition: border-color 0.3s ease-in-out;
+box-shadow: 1px 1px 2px #7e7e7e;
 }
 
 
@@ -19,6 +16,7 @@
 .input:focus {
   border-color: rgb(205, 204, 203);
     outline: none;
+    box-shadow: 1px 2px 4px;
 
 }
 

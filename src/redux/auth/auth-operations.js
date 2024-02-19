@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-
+import Notiflix from 'notiflix';
 import { signupRequest, loginRequest, currentRequest, logoutRequest } from 'api/auth-api';
 
 export const signup = createAsyncThunk(
@@ -7,9 +7,12 @@ export const signup = createAsyncThunk(
     async (body, { rejectWithValue }) => {
       
     try {
-        const data = await signupRequest(body);
+      const data = await signupRequest(body);
+      setTimeout(() => {
+        Notiflix.Notify.success('Welcome to phone book!');
+      }, 2000);
         return data;
-    } catch (error) {
+    } catch (error) {  
       return rejectWithValue(error.response.data.message);
     }
   }

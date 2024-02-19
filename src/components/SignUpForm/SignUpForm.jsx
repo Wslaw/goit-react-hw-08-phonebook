@@ -1,5 +1,4 @@
 import { useState,  useId } from 'react';
-// import { nanoid } from '@reduxjs/toolkit';
 
 import styles from './sign-up-form.module.css';
 
@@ -40,15 +39,22 @@ const SignUpForm = ({ onSubmit }) => {
   const { name, email, password } = state;
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.wrap}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.block}>
           <label htmlFor={nameId}>Name:</label>
-          <input id={nameId} value={name} onChange={handleChange} name="name" required />
+          <input
+            id={nameId}
+            value={name}
+            onChange={handleChange}
+            name="name"
+            required
+          />
         </div>
         <div className={styles.block}>
           <label htmlFor={emailId}>Email:</label>
-          <input id={emailId}
+          <input
+            id={emailId}
             value={email}
             onChange={handleChange}
             type="email"
@@ -58,7 +64,8 @@ const SignUpForm = ({ onSubmit }) => {
         </div>
         <div className={styles.block}>
           <label htmlFor={passwordId}>Password:</label>
-          <input id={passwordId}
+          <input
+            id={passwordId}
             value={password}
             onChange={handleChange}
             type="password"
@@ -70,7 +77,7 @@ const SignUpForm = ({ onSubmit }) => {
           Sign Up
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -1,8 +1,13 @@
+.wrap{
+    background-color: rgb(194, 215, 235);
+    border-radius: 15px;
+}
+
 .block{
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    gap: 40px;
+    gap: 50px;
 }
 
 .block label{
@@ -10,9 +15,9 @@
 }
 
 .btn {
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: #000;
-    background-color: bisque;
+    background-color:rgb(228, 238, 242);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -21,4 +26,29 @@
 .btn:hover{
     background-color: cadetblue;
     color: #fff;
+}
+.form {
+  padding: 30px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form input {
+  height: 20px;
+  border: 1px solid #c4bfbf;
+  box-shadow: 1px 1px 2px ;
+  border-radius: 5px;
+}
+.form input::placeholder {
+  text-indent: -10px;
+}
+
+.form input:focus {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px #7e7c7c;
 }

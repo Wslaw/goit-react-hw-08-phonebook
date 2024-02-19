@@ -1,10 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import LoginForm from 'components/LogiForm/LoginForm';
-// import { Navigate } from 'react-router-dom';
 import {
   selectAuthError,
   selectAuthLoading,
-  // selectIsLogin,
 } from '../../redux/auth/auth-selectors';
 
 import { login } from '../../redux/auth/auth-operations';
@@ -15,7 +13,6 @@ const LoginPage = () => {
 
   const authLoading = useSelector(selectAuthLoading);
   const authError = useSelector(selectAuthError);
-  // const isLogin = useSelector(selectIsLogin);
 
   const dispatch = useDispatch();
 
@@ -23,19 +20,17 @@ const LoginPage = () => {
     dispatch(login(data));
   };
 
-  // if (isLogin) {
-  //   return <Navigate to="/contacts" />;
-  // } 
-
 
 
   return (
-    <div>
-      <h1 className={styles.title}>Login page</h1>
-      {authLoading && <p>.....Register in progress</p>}
+    <div className={styles.wrap}>
+      <div className={styles.block}>
+        <h1 className={styles.title}>Login page</h1>
+        {authLoading && <p>.....Register in progress</p>}
 
-      <LoginForm onSubmit={handleLogin} />
-      {authError && <p style={{ color: 'red' }}>{authError}</p>}
+        <LoginForm onSubmit={handleLogin} />
+        {authError && <p style={{ color: 'red' }}>{authError}</p>}
+      </div>
     </div>
   );
 };
