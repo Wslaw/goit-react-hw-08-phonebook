@@ -17,7 +17,7 @@ export const signup = createAsyncThunk(
               'Registration failed. Please try again later.'
             );
 
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.response.data.message);
     }
   }
 );
