@@ -18,7 +18,7 @@ const isLogin = useSelector(selectIsLogin);
       <>
         <div className={styles.navbar}>
           <Link to="/">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" width='32'/>
           </Link>
           <div className={styles.menu}>
             <NavbarMenu />
