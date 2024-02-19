@@ -8,16 +8,16 @@
 
 .nav{
     display: flex;
+    
 }
 .link{
     display: flex;
     text-decoration: none;
     /* padding: 5px 10px; */
     margin-right: 20px;
-    color: #000;
+    /* color: #000; */
     font-size: 18px;
-    /* font-weight: bold; */
-    font-family:'Courier New', Courier, monospace;
+ font-family:'Courier New', Courier, monospace;
 }
 
 .link:global(.active){
@@ -25,5 +25,5 @@
     /* text-decoration: underline; */
 }
 .link:hover{
-    color:#8e92cd ;
+    color:#1825e0 ;
 }

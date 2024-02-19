@@ -23,19 +23,7 @@ const MainMenu = () => {
     return (
       <ul className={styles.menu}>
         {elements}
-        {/* <li>
-          <NavLink className={styles.link} to="/">
-            Home page
-          </NavLink>
-        </li>
-        <div className={styles.nav}>
-          <li>
-            <NavLink className={styles.link} to="/contacts ">
-              Contacts
-            </NavLink>
-          </li>
-        
-        </div> */}
+       
       </ul>
     );
 }

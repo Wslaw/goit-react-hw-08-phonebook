@@ -1,5 +1,5 @@
 .block{
-
+margin-left: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,16 +7,18 @@
 }
 
 .link{
+    font-family:Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
-    font-size: 18px;
-      border: 1px solid #776e76;
+    font-size: 16px;
+      /* border: 1px solid #776e76; */
     padding: 3px 10px;
     border-radius: 4px;
+    /* color: rgb(102, 132, 185); */
 }
 
 .link:global(.active){
-    color: rgb(102, 132, 185);
-  
+    /* color: rgb(102, 132, 185); */
+    
 }
 
 .link:hover{
