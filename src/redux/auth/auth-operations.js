@@ -13,7 +13,11 @@ export const signup = createAsyncThunk(
       }, 2000);
         return data;
     } catch (error) {  
-      return rejectWithValue(error.response.data.message);
+            Notiflix.Notify.failure(
+              'Registration failed. Please try again later.'
+            );
+
+      return rejectWithValue(error.message);
     }
   }
 );
