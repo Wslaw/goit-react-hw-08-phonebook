@@ -26,7 +26,7 @@ const LoginPage = () => {
     <div className={styles.wrap}>
       <div className={styles.block}>
         <h1 className={styles.title}>Login page</h1>
-        {authLoading && <p>.....Register in progress</p>}
+        {authLoading && <p className={styles.text}>.....Register in progress</p>}
 
         <LoginForm onSubmit={handleLogin} />
         {authError && <p style={{ color: 'red' }}>{authError}</p>}
