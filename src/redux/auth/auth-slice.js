@@ -50,7 +50,7 @@ const authSlice = createSlice({
           .addCase(logout.fulfilled, state => {
             state.isLoading = false;
             state.isLogin = false;
-            console.log(state.user)
+            // console.log(state.user)
             state.user = {};
             state.token = '';
           })
