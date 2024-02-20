@@ -25,12 +25,12 @@ const ContactList = () => {
     return <p>No contacts found.</p>;
   }
 
-  const elements = items.map(({ id, name, phone }) => (
+  const elements = items.map(({ id, name, number }) => (
     <li key={id}>
-      {/* {name}: {phone} */}
+      {/* {name}: {number} */}
       <div className={styles.span}>
         <span className={styles.name}>{name}:</span>
-        <span className={styles.phone}>{phone}</span>
+        <span className={styles.number}>{number}</span>
       </div>
       <button
         onClick={() => handleDeleteContact(id)}
@@ -43,6 +43,7 @@ const ContactList = () => {
   ));
 
   return (
+    
     <div>
       {error && <p>{error}</p>}
       {isLoading && <Loader/>}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Snowfall from './Snowfall/Snowfall';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -20,6 +20,7 @@ export const App = () => {
   return (
     <div className={styles.container}>
       <AppRoutes />     
+      <Snowfall/>
     </div>
   );
 };

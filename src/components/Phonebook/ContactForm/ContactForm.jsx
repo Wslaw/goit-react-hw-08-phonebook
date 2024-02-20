@@ -33,9 +33,10 @@ const ContactForm = () => {
         addContact({
           id: nanoid(),
           name: nameInput.value,
-          phone: numberInput.value,
+          number: numberInput.value,
         })
       );
+      
       e.target.reset();
     }
   };

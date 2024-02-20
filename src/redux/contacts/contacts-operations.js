@@ -30,6 +30,7 @@ export const addContact = createAsyncThunk(
     condition: ({name}, { getState }) => {
       const { contacts } = getState();
       const normalizedName = name.toLowerCase();
+      
       const isDuplicate = contacts.items.some(item => {
         const normalizedCurrentName = item.name.toLowerCase();
         return normalizedCurrentName === normalizedName;
